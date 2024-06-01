@@ -12,6 +12,11 @@
         flex-direction: columnn;
         align-items: left;
 }
+
+#mugshot {
+	max-height: 300px;
+}
+
 @keyframes scaleOutKeyframes {
 	from {
 		transform: scale(1); 
