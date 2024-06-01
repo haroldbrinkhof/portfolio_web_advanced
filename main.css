@@ -13,6 +13,10 @@
         flex-flow: row wrap;
         align-items: left;
 }
+#catCounter {
+	display: flex;
+        justify-content: center;
+}
 
 #mugshot {
 	max-height: 300px;
@@ -35,6 +39,7 @@
 #buttonRow button {
 	margin: 5px;
 }
+
 
 @keyframes scaleOutKeyframes {
 	from {

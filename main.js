@@ -1,11 +1,10 @@
 const API_URL = 'https://api.thecatapi.com/v1/images/search'
-const API_KEY = ''
-
+const PRE_SHIFTED = 'olyhb5MEgiyTvONH;yd5MEN|LFhz]|WDWey:|7uyp{xpXmK]g47y9]qieWPgGr}3ttkDf';
 let currentCat;
 
 const headers = new Headers({
   "Content-Type": "application/json",
-  "x-api-key": 'live_2JBdfvQsLKE8va2JBKyICewZyTATbv7y4rvmxumUjHZd14v6ZnfbTMdDoz0qqhAc'
+  "x-api-key": `${shift_characters(PRE_SHIFTED, -3)}`
 });
 const requestOptions = {
   method: 'GET',
@@ -13,6 +12,14 @@ const requestOptions = {
   redirect: 'follow'
 };
 
+function shift_characters(source, addition = 3){
+	return source.split('')
+		.map((_, position) =>{
+			const charCode = source.charCodeAt(position);
+			return String.fromCharCode(charCode + addition);})
+		.reduce((acc, value) => acc + value);
+
+}
 
 const retrieveCatURL = async () => {
 
@@ -60,6 +67,11 @@ const displayCat = (catData) => {
 	}
 }
 
+const updateCatCounter = (numberOfCats) => {
+	const catCounterEl = document.getElementById('catCounter');
+	catCounterEl.innerText = `You have ${numberOfCats} cats in your collection.`;
+}
+
 const getCatsFromStorage = () => localStorage.getItem('catCollection') ? JSON.parse(localStorage.getItem('catCollection')) : [];
 
 
@@ -74,6 +86,7 @@ const showCatsInCollection = () => {
 		catPicture.src = cat.url;
 		keptCatsContainer.append(catPicture);
 	}
+	updateCatCounter(catCollection.length);
 }
 
 const rejectCat = () => { 
