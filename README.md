@@ -1,7 +1,11 @@
 # portfolio_web_advanced
 poc application usable via https://raw.githack.com/haroldbrinkhof/portfolio_web_advanced/master/index.html
 
+The main application calls an API that retrieves cat pictures and allows you to store them in localStorage
+Clicking on the pictures in the storagelist will also show their enlarged self for better viewing.
 
+
+Requested features:
 -    Elementen selecteren
       + main application
          - 	https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L41
