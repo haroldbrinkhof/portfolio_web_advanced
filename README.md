@@ -70,6 +70,8 @@ poc application usable via https://raw.githack.com/haroldbrinkhof/portfolio_web_
      - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/4eab1400da2452ef7113887818df4b73a3a7354c/main.js#L88
      - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/4eab1400da2452ef7113887818df4b73a3a7354c/main.js#L119
 -    Consumer methods
+    + main application
+     - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/e8c29af299ef75be229a989194cf9616b9096b6c/main.js#L18-L22
 -    Async & Await
     + main application
      - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/4eab1400da2452ef7113887818df4b73a3a7354c/main.js#L26-L38
