@@ -22,7 +22,10 @@ const displayCat = (url) => {
 	mugshotImgEl.display = 'visible';
 }
 
-const rejectCat = () => console.log('rejecting');
+const rejectCat = () => { 
+	console.log('rejecting');
+	retrieveCatURL().then(displayCat);
+}
 const keepCat = () => console.log('keeping');
  
 // Self executing function to display the initial cat
