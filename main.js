@@ -99,7 +99,7 @@ const keepCat = () => {
 
 
 const showStoredCat = (event) => {
-	console.log(event)
+	
 	const showCaseEl = document.getElementById('showCase');
 	showCaseEl.lastElementChild.src = event.srcElement.src;
 	showCaseEl.style.display = 'block';
@@ -115,7 +115,7 @@ const hideStoredCatShowWindow = () => {
 // Self executing function to display the initial cat
 // adding event handlers to buttons
 (() => {
-	console.log('fetching the initial cat!');
+	
 	retrieveCatURL().then(displayCat);
 	document.getElementById('keep').addEventListener('click', keepCat);
 	document.getElementById('reject').addEventListener('click', rejectCat);
