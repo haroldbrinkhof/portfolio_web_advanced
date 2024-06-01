@@ -1,0 +1,14 @@
+#prospect {
+	display: flex;
+        justify-content: center;
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+}
+#keptCats {
+	display: flex;
+        justify-content: center;
+        margin: 20px;
+        flex-direction: columnn;
+        align-items: left;
+}
