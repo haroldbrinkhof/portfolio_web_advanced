@@ -1,4 +1,5 @@
 #prospect {
+	min-height: 300px;
 	display: flex;
         justify-content: center;
         margin: 20px;
@@ -9,12 +10,30 @@
 	display: flex;
         justify-content: center;
         margin: 20px;
-        flex-direction: columnn;
+        flex-flow: row wrap;
         align-items: left;
 }
 
 #mugshot {
 	max-height: 300px;
+}
+#keptCats img {
+	max-height: 100px;
+	display: flex;
+        justify-content: center;
+        margin: 20px;
+        flex-direction: columnn;
+        align-items: left;
+}
+#buttonRow {
+
+	display: flex;
+        justify-content: center;
+        margin: 20px;
+        flex-direction: columnn;
+}
+#buttonRow button {
+	margin: 5px;
 }
 
 @keyframes scaleOutKeyframes {
