@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring and rest</title>
+</head>
+<body>
+<p id="outcome" style="font-weight: bold; font-size: larger;">
+</p>
+    <script type="text/javascript">
+        function lispFunction(...tokens) {
+        	const [functionParam, ...values] = tokens;
+		document.getElementById('outcome').innerText = `in lisp the first value is the function, the others are parameters e.g. (${functionParam} ${values.reduce((a,v) => a + ' ' + v)})`
+	}
+
+
+        lispFunction('schedule-future-action', 'firstname', 'email', 'seconds-in-future');
+    </script>
+    <p>on opening this page the following code is run:</p>
+    <pre>
+    <code>
+function lispFunction(...tokens) {
+ 	const [functionParam, ...values] = tokens;
+	document.getElementById('outcome').innerText = `in lisp the first value is the function, the others are parameters e.g. (${functionParam} ${values.reduce((a,v) => a + ' ' + v)})`
+}
+
+
+lispFunction('schedule-future-action', 'firstname', 'email', 'seconds-in-future');
+    </code>
+    </pre>
+    <p>
+    it creates a function <code>lispFunction(...tokens)</code> that accepts all parameteres as a rest value parameter<br>
+    inside of the function the array that is tokens then gets destructured into the first element functionParam and the rest of the elements values<br>
+    <code> const [functionParam, ...values] = tokens; <code><br><br>
+    at this point the created variable functionParam is a string 'schedule-future-action' and values is an array containing 'firstname', 'email' and 'seconds-in-future'<br>
+    <br>
+    which then get used to set the innerText of the element you see on top of the page (in bold).
+
+</body>
+</html>
+
