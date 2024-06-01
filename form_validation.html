@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation example</title>
+</head>
+<body>
+<p>
+Prove that you're over 17 years of age!
+</p>
+<form id="legalAgeForm" onsubmit="return validateAge();">
+        <label for="dob">Enter your date of birth:</label>
+        <input type="date" id="dob" required>
+	<button id="submitBtn">submit"</button>
+</form>
+    <div id="refusal" style="color: red; display: none;">You are too young and are not allowed to continue on!</div>
+    <div id="admittance" style="color: green; display: none;">You are old enough and are allowed to continue on!</div>
+
+    <script type="text/javascript">
+        function validateAge() {
+	    const atLeast18 = 1000 * 60 * 60 * 24 * 365 * 18;
+            const dob = document.getElementById('dob').value;
+
+            const minimum = new Date(new Date().getTime() - atLeast18);
+
+            const refusal = document.getElementById('refusal');
+            const admittance = document.getElementById('admittance');
+            const form = document.getElementById('legalAgeForm');
+
+            if (new Date(dob).getTime() > minimum) {
+		window.setTimeout(() => {    
+			refusal.style.display = 'block';
+			admittance.style.display = 'none';
+		    }, 1);
+                return false;
+		}
+
+	    window.setTimeout(() => {    
+		    refusal.style.display = 'none';
+		    form.style.display = 'none';
+		    admittance.style.display = 'block';
+		    }, 1);
+            return false; 	// normally you would return true here for the form to keep on processing
+				// but for this example we return false so we can just stay on this page and show the successmessage
+        
+	}
+        
+    </script>
+</body>
+</html>
+
