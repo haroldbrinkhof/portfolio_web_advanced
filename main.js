@@ -2,6 +2,7 @@ const API_URL = 'https://api.thecatapi.com/v1/images/search'
 const PRE_SHIFTED = 'olyhb5MEgiyTvONH;yd5MEN|LFhz]|WDWey:|7uyp{xpXmK]g47y9]qieWPgGr}3ttkDf';
 let currentCat;
 
+// below 2 constructs shamelessly stolen and adapted from http://thecatapi.com/
 const headers = new Headers({
   "Content-Type": "application/json",
   "x-api-key": `${shift_characters(PRE_SHIFTED, -3)}`
@@ -13,6 +14,7 @@ const requestOptions = {
 };
 
 function shift_characters(source, addition = 3){
+	// consulted https://www.rapidtables.com/code/text/ascii-table.html
 	return source.split('')
 		.map((_, position) =>{
 			const charCode = source.charCodeAt(position);
@@ -23,28 +25,21 @@ function shift_characters(source, addition = 3){
 
 const retrieveCatURL = async () => {
 
-	console.log('retrieving cat');
-	// consulted 
 	const response = await fetch(API_URL, requestOptions);
 	/* consulted 
 	 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 		https://developer.mozilla.org/en-US/docs/Web/API/Response
 		https://developer.mozilla.org/en-US/docs/Web/API/Response/url
 	*/
-//	const catImage = await response.blob();
-//	return URL.createObjectURL(catImage);
 	const body = await response.json();
-	console.log(body);
 	currentCat = body[0];
 	return currentCat;
 	
 }
 
 const displayCat = (catData) => {
-	console.log('displaying cat ', catData);
 	const mugshotImgEl = document.getElementById('mugshot');
 	if(mugshotImgEl.style.display === 'block'){
-		console.log('adding effects');
 		// not first showing fade out current img
 		mugshotImgEl.style.transform = 'scale(0.1)';
 		mugshotImgEl.style.animation = 'scaleOutKeyframes 2s ease-in 0s 1';
@@ -76,7 +71,6 @@ const getCatsFromStorage = () => localStorage.getItem('catCollection') ? JSON.pa
 
 
 const showCatsInCollection = () => {
-	console.log("building cats collection");
 	const keptCatsContainer = document.getElementById('keptCats');
 	keptCatsContainer.innerHTML = ''
 
@@ -90,7 +84,6 @@ const showCatsInCollection = () => {
 }
 
 const rejectCat = () => { 
-	console.log('rejecting');
 	retrieveCatURL().then(displayCat);
 }
 
