@@ -40,6 +40,28 @@
 	margin: 5px;
 }
 
+#showCase {
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	display: none;
+}
+#showCase img {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	max-width: 900px;
+	z-index: -50;
+}
+
+#closeShowCase {
+	background-color: white;
+	border: 1px solid black;
+	position: fixed;
+	left: 31px;
+	top: 31px;
+
+}
 
 @keyframes scaleOutKeyframes {
 	from {

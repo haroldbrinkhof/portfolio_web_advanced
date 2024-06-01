@@ -78,6 +78,7 @@ const showCatsInCollection = () => {
 	for(const cat of catCollection){
 		const catPicture = document.createElement('img');
 		catPicture.src = cat.url;
+		catPicture.addEventListener('click', showStoredCat, true);
 		keptCatsContainer.append(catPicture);
 	}
 	updateCatCounter(catCollection.length);
@@ -97,8 +98,17 @@ const keepCat = () => {
 }
 
 
+const showStoredCat = (event) => {
+	console.log(event)
+	const showCaseEl = document.getElementById('showCase');
+	showCaseEl.lastElementChild.src = event.srcElement.src;
+	showCaseEl.style.display = 'block';
+}
 
-
+const hideStoredCatShowWindow = () => {
+	const showCaseEl = document.getElementById('showCase');
+	showCaseEl.style.display = 'none';
+}
 
 
 
@@ -109,6 +119,7 @@ const keepCat = () => {
 	retrieveCatURL().then(displayCat);
 	document.getElementById('keep').addEventListener('click', keepCat);
 	document.getElementById('reject').addEventListener('click', rejectCat);
+	document.getElementById('closeShowCase').addEventListener('click', hideStoredCatShowWindow);
 	showCatsInCollection();
 })();
 
