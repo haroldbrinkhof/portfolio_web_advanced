@@ -25,6 +25,8 @@ poc application usable via https://raw.githack.com/haroldbrinkhof/portfolio_web_
        - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L81
        - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L120
 -    Formulier valideren
+     + non main application example:   https://raw.githack.com/haroldbrinkhof/portfolio_web_advanced/master/form_validation.html
+     + https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/b0e3a57f08ea446112b7111a5e93f75e35ac007e/form_validation.html#L20-L47
 -    Gebruiken van een constante
      + main application
        - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L1
@@ -34,9 +36,13 @@ poc application usable via https://raw.githack.com/haroldbrinkhof/portfolio_web_
        - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L8
        - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L67 
 -    Destructuring
+     + non main application example:   https://raw.githack.com/haroldbrinkhof/portfolio_web_advanced/master/destructuring_and_rest.html
+     + https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/7eb89769bd93d2cf0efb3a66cc9273a51a61ec2b/destructuring_and_rest.html#L14   
 -    Spread & Rest operator
     + main application
      - spread operator https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L95
+    + non main application example:   https://raw.githack.com/haroldbrinkhof/portfolio_web_advanced/master/destructuring_and_rest.html
+      - Rest operator https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/7eb89769bd93d2cf0efb3a66cc9273a51a61ec2b/destructuring_and_rest.html#L13
 -    Iteration over een array
     + main application
      - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/f76cffbeeb8e4313399c99f9fd0b6354ecad19b6/main.js#L18-L22
