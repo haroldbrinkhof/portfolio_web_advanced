@@ -12,3 +12,21 @@
         flex-direction: columnn;
         align-items: left;
 }
+@keyframes scaleOutKeyframes {
+	from {
+		transform: scale(1); 
+	}
+	to {
+		transform: scale(0.1);
+	}
+
+}
+@keyframes scaleInKeyframes {
+	to {
+		transform: scale(1); 
+	}
+	from {
+		transform: scale(0.1);
+	}
+
+}
