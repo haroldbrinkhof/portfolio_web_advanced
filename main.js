@@ -21,9 +21,15 @@ const displayCat = (url) => {
 	mugshotImgEl.src = url;
 	mugshotImgEl.display = 'visible';
 }
+
+const rejectCat = () => console.log('rejecting');
+const keepCat = () => console.log('keeping');
  
 // Self executing function to display the initial cat
+// adding event handlers to buttons
 (() => {
 	console.log('fetching the initial cat!');
 	retrieveCatURL().then(displayCat);
+	document.getElementById('keep').addEventListener('click', keepCat);
+	document.getElementById('reject').addEventListener('click', rejectCat);
 })();
