@@ -108,3 +108,4 @@ Consulted
 - 	https://www.rapidtables.com/code/text/ascii-table.html
 - 	https://developer.mozilla.org (Css, javascript, HTML tags: via various google queries per topic)
 - 	https://stackoverflow.com on a specific item that had me stumped
+- 	EHB course videos in combination with MDN for the CSS transitions
