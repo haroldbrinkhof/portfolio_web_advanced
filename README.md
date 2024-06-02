@@ -103,3 +103,8 @@ Requested features:
     + main application
      - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/4eab1400da2452ef7113887818df4b73a3a7354c/main.js#L70
      - https://github.com/haroldbrinkhof/portfolio_web_advanced/blob/4eab1400da2452ef7113887818df4b73a3a7354c/main.js#L95
+ 
+Consulted
+- 	https://www.rapidtables.com/code/text/ascii-table.html
+- 	https://developer.mozilla.org (Css, javascript, HTML tags: via various google queries per topic)
+- 	https://stackoverflow.com on a specific item that had me stumped
